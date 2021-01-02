@@ -1,0 +1,10 @@
+#products {
+    width: 500px;
+    padding: 15px;
+}
+
+.card-image {
+    height: auto;
+    width: auto;
+    text-decoration-color: black;
+}
