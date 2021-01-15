@@ -1,49 +1,40 @@
-import React, {useState, useEffect} from 'react';
-import { productDetails } from './Item.js';
+import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
-//Estilo//
-import './ItemList.css';
+import ProductContext from '../Context/ProductContext';
 
-const ItemList = () => {
-    const [product, setItem] = useState([]);
+function ItemList () {
 
-    useEffect(() => {
-        setTimeout(() => {
-           const promise = new Promise((resolve, reject) => {
-               resolve(productDetails);
-           });
-           promise.then(productDetails => {
-               setItem(productDetails);
-           })
-        }, 1000);
-    },[])
+    const product = useContext(ProductContext)
 
-    return(
-        <>
-         {product.map((e) => {
-             return(
-                 <div key={e.id} id="products" class="row">
-                         <div class="col s12">
-                             <div class="card">
-                                 <div class="card-image">
-                                   <Link to={`/products/${e.id}`}>
-                                     <img src={e.pictureUrl} /> </Link>      
-                                        <span class="card-title">{e.name}</span>
-                                           <a class="btn-floating halfway-fab waves-effect waves-light blue"><i class="material-icons">+</i></a>
-                                 </div>
-                                 <div class="card-content">  
-                                   <p>${e.price}</p>
-                                   <p>{e.description}</p>
-                                 </div>
-                            </div>
-                         </div>  
-                  </div>               
-             )
-         }
-         )}
-        </>
-    )
+     return(
+      <>
+      {product.map((e) => {
 
-}
+           return(
+
+              <div class="row" key={e.id}>
+              <div class="col s12 m7">
+                <div class="card">
+                  <div class="card-image">
+                  <Link to={`/itemDetailContainer/${e.category}/${e.id}`}><img src={e.pictureUrl}></img>
+                       <span class="card-title">{e.name}</span></Link>
+                    </div>
+                  <div class="card-content">
+                    <Link to={`/itemDetailContainer/${e.category}/${e.id}`}>
+                    <p>${e.price}</p>
+                    <p>Details</p></Link>
+                  </div>
+                 <div class="card-action">
+                 <a href="#">Add to cart</a>
+                </div>
+              </div>
+              </div>
+              </div> 
+               )
+         })
+        }   
+     </>         
+   )
+ }
 
 export default ItemList;

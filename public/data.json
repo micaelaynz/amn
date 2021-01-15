@@ -1,5 +1,6 @@
 [
     {
+        "category": "shop",
         "id": "T9140013",
         "name": "Smart Scale",
         "price": 44.99,
@@ -8,6 +9,7 @@
     },
 
     {
+        "category": "shop",
         "id": "A3393011",
         "name": "Trance",
         "price": 149.99,
@@ -16,6 +18,7 @@
     },
 
     {
+        "category": "shop",
         "id": "E1202121",
         "name": "Smart Plug Mini",
         "price": 39.99,
@@ -24,6 +27,7 @@
     },
 
     {
+        "category": "shop",
         "id": "A83620A1",
         "name": "PowerExpand Direct 6-in-1 USC-C PD Media Hub",
         "price": 49.99,
@@ -32,6 +36,7 @@
     },
 
     {
+        "category": "shop",
         "id": "R5360Z11",
         "name": "Roav Bolt",
         "price": 49.99,

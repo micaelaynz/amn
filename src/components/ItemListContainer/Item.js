@@ -1,4 +1,4 @@
-export const productDetails = [
+export const products = [
     {
         "id": "T9140013",
         "name": "Smart Scale",

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from 'react-router-dom';
-import { productDetails} from '../ItemListContainer/Item.js';
+import {useParams, Link} from 'react-router-dom';
+import {productDetail} from '../ItemDetailContainer/ProductDetail.js';
 
 const ItemDetail = () => {
     
@@ -10,30 +10,36 @@ const ItemDetail = () => {
     useEffect(() => {
         setTimeout(() => {
            const promise = new Promise((resolve, reject) => {
-               resolve(productDetails);
+               resolve(productDetail);
            });
-           promise.then(productDetails => {
-               setItem(productDetails);
+           promise.then(productDetail => {
+               setItem(productDetail);
            })
         }, 500);
     },[id])
 
     return(
         <div>
-        {item.length == 0 ?
+        {item.length === 0 ?
             (<p>Loading...</p>)
             :item.map((e) => {
                 return(
                     e.id === id ?
-                    <div key={e.id}>
-                        <div id="cover">
-                            <img src= {e.pictureUrl} />
-                        </div>
-                        <div id="product">
-                            <h2>{e.name}</h2>
-                            <p>${e.prie}</p>
-                            <p>{e.decription}</p>
-                        </div>
+                    <div key={e.id} id="products" class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-image">
+                              <Link to={`/products/${e.id}`}>
+                                <img src={e.pictureUrl} /> </Link>      
+                                   <span class="card-title">{e.name}</span>
+                                      <a class="btn-floating halfway-fab waves-effect waves-light blue"><i class="material-icons">+</i></a>
+                            </div>
+                            <div class="card-content">  
+                              <p>${e.price}</p>
+                              <p>{e.description}</p>
+                            </div>
+                       </div>
+                    </div>                
                     </div> : null 
                     )
                  }

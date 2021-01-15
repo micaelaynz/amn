@@ -1,10 +1,12 @@
 #products {
     width: 500px;
     padding: 15px;
+    display: inline-block;
+    text-align: center;
 }
 
 .card-image {
-    height: auto;
-    width: auto;
+    height: 50px;
+    width: 50px;
     text-decoration-color: black;
 }

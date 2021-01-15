@@ -1,40 +1,25 @@
-import React from 'react';
+import React from "react";
 import {Link, NavLink} from 'react-router-dom';
 //Estilo//
 import './NavBar.css';
 //Components//
 import CartWidget from './CartWidget.js';
 
-class NavBar extends React.Component {
-
-    constructor (){
-      super();
-      this.state = {
-        uno : "about",
-        dos : "support",
-        tres : "cart",
-      }
-    }
-
-    render(){
-
-    const {uno, dos, tres} = this.state
-
+function NavBar () {
     return (
          <nav>
              <div class="nav-wrapper">
                <Link to="/" class="brand-logo">ANM</Link>
                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                   <li><NavLink to={`/${uno}`}>About</NavLink></li>
-                   <li><NavLink to={`/${dos}`}>Support</NavLink></li>
+                   <li><NavLink to={`/shop`}>Shop</NavLink></li>
+                   <li><NavLink to={`/support`}>Support</NavLink></li>
                    <li id="cart">
-                     <NavLink to={`/${tres}`}><CartWidget /></NavLink>
+                    <Link to={`/cart`}><CartWidget /></Link> 
                      </li>
                </ul>
              </div>
-         </nav>
-    );
-  }
-}
+          </nav>
+            ) 
+        }
 
   export default NavBar;

@@ -1,11 +1,13 @@
+import React from 'react';
 import ItemList from './ItemList.js';
+import './ItemList.css';
 
-const ItemListContainer = () => {
-        return (
-            <div>
-                <ItemList />
-            </div>
-        )
-}
+function ItemListContainer () {
+    return (
+        <>
+        <ItemList />
+        </>
+    )
+    }
 
 export default ItemListContainer;
