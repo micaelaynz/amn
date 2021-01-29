@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {useParams, Link} from 'react-router-dom';
 import ProductContext from '../Context/ProductContext';
+import '../NavBar/CartWidget.js'
 
 function ItemDetail () {
  
@@ -15,24 +16,28 @@ function ItemDetail () {
             :product.map((e) => {
                 return(
                     e.id === id ?
-                    <div className="Container" key={e.id}>        
-            <div id="itemDetailContainer">
-            <div>
-                <div id="productContainer">
-                <img src= {e.pictureUrl} />
+         <div className="Container" key={e.id}>        
+            <div className="itemDetailContainer">
+                <div className="productContainer">
+                    <div className="row">
+                         <div className="col-lg-6">
+                      <img src= {e.pictureUrl} />
+                    </div>
+                    <div className="col-lg-6 product_col">
+						<div className="product_info">
+							<div className="product_name">{e.name}</div>
+							<div className="product_price">$<span>{e.price}</span></div>
+                            <div className="product_text">
+								<p>{e.description}</p>
+							</div>
+                            <div className="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
+										<div><img src="../NavBar/CartWidget.js"></img><div>+</div>
+                                        </div>
+									</div>
+                        </div>
+                     </div>
+                    </div>
                 </div>
-                <div>
-                
-                </div>
-            </div>
-            <div id="content">
-                <h2 className="details">{e.name}</h2>
-                
-            </div>
-            </div>
-            <div className="abstractContainer">
-                <h4 id="abstractTitle">Resumen:</h4>
-                <p id="abstractText">{e.abstract}</p>
             </div>
         </div> : null
                 )  
