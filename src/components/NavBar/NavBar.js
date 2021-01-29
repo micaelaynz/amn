@@ -8,9 +8,9 @@ import CartWidget from './CartWidget.js';
 function NavBar () {
     return (
          <nav>
-             <div class="nav-wrapper">
-               <Link to="/" class="brand-logo">ANM</Link>
-               <ul id="nav-mobile" class="right hide-on-med-and-down">
+             <div className="nav-wrapper">
+               <Link to="/" className="brand-logo">ANM</Link>
+               <ul id="nav-mobile" className="right hide-on-med-and-down">
                    <li><NavLink to={`/shop`}>Shop</NavLink></li>
                    <li><NavLink to={`/support`}>Support</NavLink></li>
                    <li id="cart">

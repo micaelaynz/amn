@@ -1,6 +1,7 @@
 export const products = [
     {
         "id": "T9140013",
+        "category": "electronics",
         "name": "Smart Scale",
         "price": 44.99,
         "description": "Smart Scale with Bluetooth, Body Fat Scale, Wireless Digital Bathroom Scale, 12 Measurements.",
@@ -9,6 +10,7 @@ export const products = [
 
     {
         "id": "A3393011",
+        "category": "electronics",
         "name": "Trance",
         "price": 149.99,
         "description": "Party Speaker with 18 hour Playtime, BassUp Tehcnology, Huge 80w Sound, LED Lights, Soundcore App, IPX7 Waterproof, Wireless Speaker for Indoors and Outdoors.",
@@ -17,6 +19,7 @@ export const products = [
 
     {
         "id": "E1202121",
+        "category": "electronics",
         "name": "Smart Plug Mini",
         "price": 39.99,
         "description": "The mini outlet that makes devices Smart.",
@@ -25,6 +28,7 @@ export const products = [
 
     {
         "id": "A83620A1",
+        "category": "electronics",
         "name": "PowerExpand Direct 6-in-1 USC-C PD Media Hub",
         "price": 49.99,
         "description": "USB C Hub for Ipad Pro, PowerExpand, Direct 6-in-1 USB C Adapter with 60w power delivery, 4K  60Hz HDMI port, 3.5mm Headphone Jack, USB 3.0 Port, SD and MicroSD Card reader.",
@@ -33,6 +37,7 @@ export const products = [
 
     {
         "id": "R5360Z11",
+        "category": "electronics",
         "name": "Roav Bolt",
         "price": 49.99,
         "description": "Car charger optimized for Google Assistant.",
