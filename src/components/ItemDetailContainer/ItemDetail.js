@@ -5,7 +5,7 @@ import '../NavBar/CartWidget.js'
 
 function ItemDetail () {
  
-    const  product = useContext(ProductContext);
+    const  product = useContext(ProductContext).product;
 
     const {id} = useParams();
 

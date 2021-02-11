@@ -1,14 +1,16 @@
 import React, {useContext} from 'react';
 import {Link} from 'react-router-dom';
-//Context//
+//Context
 import ProductContext from '../Context/ProductContext';
-//Estilo//
+//Estilo
 import './ItemList.css';
+//Components
+import ItemCount from '../ItemCount/ItemCount.js';
 
 function ItemList () {
 
-    const product = useContext(ProductContext)
-
+    const product = useContext(ProductContext).product
+    console.log(process.env.REACT_APP_apiKey)
      return(
       <>
       {product.map((e) => {
@@ -26,7 +28,7 @@ function ItemList () {
                     <p>${e.price}</p></Link>
                   </div>
                  <div className="card-action">
-                 <a href="#">Add to cart</a>
+                 <ItemCount />
                 </div>
               </div>
               </div>

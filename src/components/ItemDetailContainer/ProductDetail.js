@@ -7,3 +7,4 @@ export const productDetail = [
         "pictureUrl": "https://d2211byn0pk9fi.cloudfront.net/spree/products/85335/product/61KobYn6YkL._AC_SL1500_.jpg?1606102643"
     }
 ]
+

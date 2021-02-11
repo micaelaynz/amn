@@ -1,6 +1,7 @@
 .nav-wrapper {
     margin: 0px;
     background-color: #D077F5;
+    overflow: hidden;
 }
 
 .brand-logo {
@@ -9,4 +10,8 @@
 
 #cart {
     margin: 10px 5px 0px 0px;
+}
+
+img {
+    height: 50px;
 }
