@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 //Estilo//
-import './App.css';
+import './style.css';
 import 'materialize-css';
 import 'materialize-css/dist/css/materialize.css';
 //Components//

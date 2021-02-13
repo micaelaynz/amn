@@ -47,7 +47,7 @@ function CartView() {
 									<li className="cart_item item_list d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-end justify-content-start">
 										<div className="product d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start mr-auto">
 											<div><div class="product_number">1</div></div>
-											<div><div class="product_image"><img src="images/cart_item_1.jpg" alt=""></div></div>
+											<div><div class="product_image"><img src="images/cart_item_1.jpg" alt=""/></div></div>
 											<div class="product_name_container">
 												<div class="product_name"><a href="product.html">Cool Flufy Clothing without Stripes</a></div>
 												<div class="product_text">Second line for additional info</div>

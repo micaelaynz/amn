@@ -1,0 +1,17 @@
+.home-nav { 
+    background-color: #DEC5E0;
+    padding: 10px 30px 10px 30px;
+    height: 80px;
+}
+h2 {
+    color: #f0d38a;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 30px;
+    margin-left: 50px;
+}
+
+nav.home-nav img {
+    max-height: 93px;
+    margin-top: -6px;
+}

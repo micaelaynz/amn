@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {useParams, Link} from 'react-router-dom';
 import ProductContext from '../Context/ProductContext';
-import '../NavBar/CartWidget.js'
+import ItemCount from '../ItemCount/ItemCount.js';
 
 function ItemDetail () {
  
@@ -31,8 +31,7 @@ function ItemDetail () {
 								<p>{e.description}</p>
 							</div>
                             <div className="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center">
-										<div><img src="../NavBar/CartWidget.js"></img><div>+</div>
-                                        </div>
+										<ItemCount />
 									</div>
                         </div>
                      </div>

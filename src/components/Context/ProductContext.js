@@ -15,11 +15,6 @@ function ProductContextProvider({children}) {
         const ItemCollection = db.collection("items");
         const query = ItemCollection.get();
 
-      //  const selectedCategory = ItemCollection.where('category', '==', 'Tor-Books');
-
-     //   const categoryCollection = db.collection("categories");
-       // const ask = categoryCollection.get();
-
         query
         .then((resultado) => {
             resultado.docs.map((doc) => console.log(doc))
@@ -31,29 +26,6 @@ function ProductContextProvider({children}) {
         .catch((error) => {
             console.log(error)
         })
-
-       /* selectedCategory.get().then((resultado) => {
-            const data = resultado.docs.map((doc) => ({
-                id: doc.id,
-                ...doc.data()
-            }))
-            setItems(data);
-        })
-        .catch((error) => {
-            console.log(error)
-        })*/
-
-      /*  ask
-        .then((resultado) => {
-            const data = resultado.docs.map((doc) => ({
-                id: doc.id,
-                ...doc.data()
-            }))
-            setCategories(data);
-        })
-        .catch((error) => {
-            console.log(error)
-        })*/
 
     },[]);
     

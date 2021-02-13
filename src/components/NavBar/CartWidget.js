@@ -1,10 +1,10 @@
-import cart from './img/shopping-cart.png';
-import './NavBar.css';
+import './cart.svg';
+import '../../style.css';
 
 function CartWidget () {
     return (
 <>
-<img src={cart} height="40px"></img>
+<img src="./cart.svg" height="40px"></img>
 
 </>
     )
